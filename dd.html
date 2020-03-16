@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multilevel dropdown menu</title>
+    <meta charset="utf-8">
+    <style>
+        /*Global*/
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*Funct*/
+        .multi-level,
+        .item ul,
+        .nav input[type="checkbox"] {
+            display: none;
+        }
+
+        #menu:checked ~ .multi-level, .item input:checked ~ ul{
+            display: block;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <div class="nav">
+        <input type="checkbox" id="menu">
+        <label for="menu">&#9776</label>
+
+
+        <div class="multi-level">
+            <div class="item">
+                <input type="checkbox" id="A">
+                <label for="A">Services</label>
+                <ul>
+                    <li><a href="#">Banking</a></li>
+                    <li><a href="#">Add Money</a></li>
+                    <li><a href="#">Check Balance</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="A">
+                <label for="A">Banks</label>
+                <ul>
+                    <li>
+                        <div class="sub-item">
+                            <input type="checkbox" id="B-A">
+                            <label for="B-A">CUB</label>
+                            <ul>
+                                <li><a href="#">Personal</a></li>
+                                <li><a href="#">Corporate</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sub-item">
+                            <input type="checkbox" id="B-B">
+                            <label for="B-B">IOB</label>
+                            <ul>
+                                <li><a href="#">NetBanking</a></li>
+                                <li><a href="#">Mobile Banking</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
